@@ -1,0 +1,95 @@
+.divAvo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.divPai{
+  display: flex;
+  width: 1280px;
+
+}
+
+.footer{
+  background-color: #222222;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.footerDiv{
+  width: 1280px;
+}
+
+
+
+
+
+
+
+/*  */
+.newsletter{
+  display: flex;
+  flex-direction: column;
+}
+.newsletter .h2, .p, .formulario-newsletter{
+  margin: 10px;
+}
+
+/* Estilo do formulário */
+.formulario_newsletter {
+  display: flex; /* Utiliza flexbox para alinhar o campo de entrada e o botão */
+  width: 100%; /* A largura pode ser ajustada conforme necessário */
+  max-width: 600px; /* Define uma largura máxima para o formulário */
+}
+
+/* Estilo do campo de entrada */
+.input_email {
+  width: 528px;
+  flex-grow: 1; /* Faz com que o campo de entrada ocupe o espaço disponível */
+  border: none; /* Remove a borda padrão */
+  padding: 10px; /* Espaçamento interno */
+  margin: 10px; /* Margem em volta do campo de entrada */
+}
+
+/* Estilo do botão de envio */
+.botao_enviar {
+  background-color: #DAA520; /* Cor de fundo do botão */
+  width: 255px;
+  color: white; /* Cor do texto do botão */
+  border: none; /* Remove a borda padrão */
+  padding: 10px 20px; /* Espaçamento interno */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  margin: 10px; /* Margem em volta do botão */
+  transition: background-color 0.3s; /* Transição suave para mudança de cor */
+}
+
+/* Estilo do botão de envio ao passar o mouse */
+.botao_enviar:hover {
+  background-color: #B8860B; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/*  */
+
+
+
+.endereco{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+
+.footer_copy{
+  margin: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.endereco .strong{
+  color: #fff
+}

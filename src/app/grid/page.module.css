@@ -1,0 +1,244 @@
+.margem_wrapper {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* background-color: brown; */
+    margin: 20px;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    /* background-color: chartreuse; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Duas colunas */
+    grid-template-rows: 1fr 1fr;
+    /* Duas colunas */
+    justify-content: start;
+    align-items: flex-start;
+    /* transform: translateX(-5%); */
+}
+
+.grid_item1,
+.grid_item2 {
+    width: auto;
+    height: auto;
+    /* background-color: aqua; */
+}
+
+.grid_item3{
+    width: auto;
+    height: auto;
+    /* background-color: blueviolet; */
+}
+.grid_item4{
+    width: auto;
+    height: auto;
+    /* background-color: blueviolet; */
+}
+
+.grid_item3, .grid_item4 {
+    transform: translateX(10%) translateY(-60%);
+  }
+
+
+/* grid 2 */
+.grid_item2{
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+
+}
+.grid_item2 .infos_hotel{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grid_item2 .infos_hotel .header .titulo {
+    font-family: 'Playfair Display', serif;
+    color: #2c2c2c;
+    letter-spacing: 1px;
+    font-size: 36px;
+}
+
+.grid_item2 .infos_hotel .description .texto {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: #828282;
+}
+
+.grid_item2 .infos_hotel .reserva_button .button {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 2px;
+    padding: 18px;
+    margin-bottom: 10px;
+    border: 0px solid #ccc;
+    border-radius: 2px;
+    background-color: #E9B169;
+    color: #fff;
+    font-family: 'Inter', Sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.grid_item2 .infos_hotel .reserva_button .button:hover {
+    background-color: #f1a035;
+    animation: hoverAnimation 1s ease-in-out infinite;
+}
+
+.grid_item2 .infos_hotel .reserva_button .button * {
+    color: black;
+}
+
+.oferecemos .titulo {
+    font-family: 'Playfair Display', serif;
+    color: #2c2c2c;
+    letter-spacing: 1px;
+}
+
+.oferecemos .opcao1,
+.opcao2 {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #2255CC;
+    font-family: 'Inter', sans-serif;
+}
+
+.oferecemos .info_opcao:hover {
+    animation: hoverAnimation 1s ease-in-out infinite;
+}
+
+@keyframes hoverAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+.oferecemos {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 25px;
+    margin: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* grid 3 */
+.info_container {
+    background-color: #fff;
+    /* Cor de fundo cinza claro */
+    padding: 64px;
+    /* Espaçamento interno */
+    color: #333;
+    /* Cor do texto */
+    font-family: sans-serif;
+    /* Fonte genérica */
+    border-radius: 5px;
+}
+
+.header {
+    font-size: 36px;
+    /* Tamanho da fonte do cabeçalho */
+    font-weight: bold;
+    /* Negrito */
+    margin-bottom: 10px;
+    /* Espaçamento após o cabeçalho */
+    font-family: 'Playfair Display', serif;
+}
+
+.description {
+    color: #828282;
+    font-size: 18px;
+    /* Tamanho da fonte da descrição */
+    margin-bottom: 20px;
+    /* Espaçamento após a descrição */
+    font-family: 'Inter', sans-serif;
+}
+
+.stats {
+    display: flex;
+    /* Usa flexbox para alinhar os itens */
+    justify-content: space-between;
+    /* Espaça os itens igualmente */
+    padding-top: 10px;
+    /* Espaçamento acima dos itens */
+}
+
+.stat_item {
+    text-align: center;
+    /* Centraliza o texto dos itens */
+    flex-basis: 33%;
+
+}
+
+.stat_number {
+    font-size: 30px;
+    /* Tamanho da fonte dos números */
+    font-weight: bold;
+    /* Negrito */
+    font-family: 'Playfair Display', serif;
+}
+
+.stat_label {
+    font-size: 14px;
+    /* Tamanho da fonte dos rótulos */
+    text-transform: uppercase;
+    /* Rótulos em maiúsculas */
+    color: #666;
+    /* Cor do texto dos rótulos */
+    font-family: 'Playfair Display', serif;
+
+}
+
+.stat_item:nth-child(2) {
+    border-left: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+}
+
+
+/* grid 4 */
+.grid_item4{
+    display: flex; /* Ativa flexbox */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    justify-content: flex-start; /* Alinha os itens ao topo */
+    
+}
+.grid_item4 .video {
+    position: relative; /* Exemplo: define o posicionamento relativo para o conteúdo interno */
+    display: flex; /* Exemplo: alinha o conteúdo no centro */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+  
+  /* Estilos específicos para um SVG dentro de .grid_item4 */
+  .grid_item4 .video .svg {
+    position: absolute;
+}
+  

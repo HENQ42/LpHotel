@@ -1,0 +1,83 @@
+.margem{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+}
+.margem .container{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.margem .container .titulo{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+.margem .container .titulo .img_area{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+}
+.margem .container .titulo .endereco{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+.margem .container .titulo .endereco .h3{
+    color: white;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+}
+.margem .container .titulo .endereco .p{
+    color: white;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
+.margem .container .titulo .services{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.margem .container .titulo .services .servicos_images{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    padding-top: 15px;
+}
+.margem .container .titulo .services .servicos_images .logo_area{
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #E9B169;
+}
+.direitos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 25px;
+    gap: 10px;
+    font-style: oblique;
+    border-top: 1px solid #FFFFFF33;
+    padding-top: 10px;
+}
+.direitos .p{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}

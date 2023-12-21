@@ -1,0 +1,241 @@
+.navExterna {
+  display: flex;
+  width: 100%;
+  /* background-color: aqua; */
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #FFFFFF33;
+}
+
+.navExterna * {
+  z-index: 3;
+}
+
+.navInterna {
+  display: flex;
+  flex-direction: row;
+  /* background-color: aquamarine; */
+  justify-content: space-between;
+  align-items: center;
+  width: 1280px;
+  padding: 10px;
+}
+
+.botaoNav .span {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  fill: #fff;
+  margin: 8px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* adicionando borda de 1px da cor azul */
+.botaoNav {
+  padding-left: 14px;
+  padding-right: 14px;
+  padding: 7px;
+  border: 1px solid #E9B169;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+/* botao vai ficar um loop infinito, subindo no eixo y 3 pixels e descendo, logo depois repetindo isso */
+.botaoNav:hover {
+  animation: hoverAnimation 1s ease-in-out infinite;
+}
+
+@keyframes hoverAnimation {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+
+
+
+
+
+
+
+
+.navImage {
+  background-image: url('/images/image.png');
+  /* Caminho relativo a partir da pasta public */
+  background-size: cover;
+  /* ou use 'contain' dependendo de como você quer que a imagem se ajuste */
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Outras propriedades de estilo para sua div */
+  width: 100%;
+  /* Exemplo de largura */
+  height: 891px;
+  /* Exemplo de altura */
+  /* background: rgba(0, 0, 0, 0.034); */
+  z-index: 1;
+}
+
+.navImage::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  /* Sobreposição preta com 50% de opacidade */
+}
+
+.reservaMargin {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  /* background-color: blue; */
+}
+
+.reserva * {
+  z-index: 3;
+}
+
+.reserva {
+  display: flex;
+  /* background-color: aqua; */
+  width: 1280px;
+  flex-direction: row;
+  margin: 10px;
+  justify-content: space-between;
+}
+
+.slogan {
+  width: 50%;
+}
+
+.slogan .h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 93px;
+  color: #fff;
+  margin: 10px;
+
+}
+
+.slogan .h2 {
+  font-family: 'Inter', Sans-serif;
+  font-size: 20px;
+  color: #E9B169;
+  margin: 10px;
+}
+
+.slogan .p {
+  font-family: Sans-serif;
+  font-size: 24px;
+  color: #FFF;
+  margin: 10px;
+}
+
+.reservaForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(50, 13, 255); */
+  width: 50%;
+}
+
+.reservaFormInterno {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 40%;
+  margin: 15px;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.reservaFormInterno .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.reservaFormTitulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+  width: 100%;
+  padding: 7px;
+  gap: 12px;
+}
+
+.reservaFormInterno .h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #fff;
+}
+
+.reservaFormInterno .p {
+  font-family: 'Inter', Sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+.reservaFormInterno .form{
+  width: 100%;
+}
+.reservaFormInterno .form .divDate{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+/* retirando o placeholder do date */
+
+
+
+
+.reservaFormInterno .form .input {
+  width: 100%;
+  padding: 18px;
+  margin-bottom: 10px;
+  border: 0px solid #ccc;
+  border-radius: 2px;
+}
+.reservaFormInterno .form .button{
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  border: 0px solid #ccc;
+  border-radius: 2px;
+  background-color: #E9B169;
+  color: #fff;
+  font-family: 'Inter', Sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+/* colocando sombra */
+.reservaFormInterno .form .button:hover{
+  background-color: #f1a035;
+  animation: hoverAnimation 1s ease-in-out infinite;
+}
+.reservaFormInterno .form .button *{
+  color: black;
+}
