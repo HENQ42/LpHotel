@@ -267,3 +267,22 @@
     align-items: center;
     background-color: #ffffff;
 }
+
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+
+.container .quartos{
+    flex-direction: column;
+    gap: 0px;
+}
+
+}
+
+
+/* Tablets em modo paisagem */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .container .quartos{
+        flex-direction: column;
+        gap: 0px;
+    }
+}

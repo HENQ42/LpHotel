@@ -19,6 +19,7 @@
     justify-content: start;
     align-items: flex-start;
     /* transform: translateX(-5%); */
+    height: 1040px;
 }
 
 .grid_item1,
@@ -242,3 +243,131 @@
     position: absolute;
 }
   
+
+
+/* Celulares */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .grid_item1{
+        display: none;
+    }
+    .grid_item2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .grid_item2 .infos_hotel{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .grid_item2 .infos_hotel .header .titulo {
+        font-size: 24px;
+    }
+    .grid_item2 .infos_hotel .description {
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .grid_item3, .grid_item4 {
+        width: 100%;
+        transform: translateX(0) translateY(0);
+    }
+    .margem_wrapper{
+        margin: 0px;
+    }
+
+    .oferecemos .opcao1,
+.opcao2 {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #2255CC;
+    font-family: 'Inter', sans-serif;
+}
+
+.info_container .stats{
+    gap:10px;
+    padding: 10px;
+}
+.grid_item4 .video{
+    display: none;
+}
+
+.info_container{
+    text-align: justify;
+}
+
+}
+/* Tablets em modo paisagem */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .grid_item1{
+        display: none;
+    }
+    .grid_item2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .grid_item2 .infos_hotel{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .grid_item2 .infos_hotel .header .titulo {
+        font-size: 24px;
+    }
+    .grid_item2 .infos_hotel .description {
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .grid_item3, .grid_item4 {
+        width: 100%;
+        transform: translateX(0) translateY(0);
+    }
+    .margem_wrapper{
+        margin: 0px;
+    }
+
+    .oferecemos .opcao1,
+.opcao2 {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #2255CC;
+    font-family: 'Inter', sans-serif;
+}
+
+.info_container .stats{
+    gap:10px;
+    padding: 10px;
+}
+.grid_item4 .video{
+    display: none;
+}
+
+.info_container{
+    text-align: center;
+}
+}
+
+
+

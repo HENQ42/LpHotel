@@ -67,6 +67,7 @@
 
 .navImage {
   background-image: url('/images/image.png');
+  filter: blur(0px);
   /* Caminho relativo a partir da pasta public */
   background-size: cover;
   /* ou use 'contain' dependendo de como você quer que a imagem se ajuste */
@@ -191,15 +192,18 @@
   font-size: 18px;
   color: #fff;
 }
-.reservaFormInterno .form{
+
+.reservaFormInterno .form {
   width: 100%;
 }
-.reservaFormInterno .form .divDate{
+
+.reservaFormInterno .form .divDate {
   width: 100%;
   display: flex;
   flex-direction: row;
   gap: 5px;
 }
+
 /* retirando o placeholder do date */
 
 
@@ -212,7 +216,8 @@
   border: 0px solid #ccc;
   border-radius: 2px;
 }
-.reservaFormInterno .form .button{
+
+.reservaFormInterno .form .button {
   flex-direction: row;
   display: flex;
   justify-content: center;
@@ -220,7 +225,7 @@
   gap: 8px;
   width: 100%;
   padding: 18px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-bottom: 10px;
   border: 0px solid #ccc;
   border-radius: 2px;
@@ -231,11 +236,115 @@
   cursor: pointer;
   transition: 0.5s;
 }
+
 /* colocando sombra */
-.reservaFormInterno .form .button:hover{
+.reservaFormInterno .form .button:hover {
   background-color: #f1a035;
   animation: hoverAnimation 1s ease-in-out infinite;
 }
-.reservaFormInterno .form .button *{
+
+.reservaFormInterno .form .button * {
   color: black;
+}
+
+
+
+
+
+
+
+/* Celulares */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+
+
+  .navImage {
+    height: 100%;
+  }
+
+  .reserva {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slogan {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .slogan .p {
+    text-align: justify;
+  }
+
+  .slogan .h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 83px;
+    color: #fff;
+    margin: 10px;
+
+  }
+
+  .reservaFormInterno {
+    padding: 10px;
+    width: 90%;
+    margin: 5px;
+  }
+
+  .reservaFormTitulo {
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+  }
+
+
+
+
+}
+
+/* Tablets em modo paisagem */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .navImage {
+    height: 100%;
+  }
+
+  .reserva {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slogan {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .slogan .p {
+    text-align: justify;
+  }
+
+  .slogan .h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 83px;
+    color: #fff;
+    margin: 10px;
+
+  }
+
+  .reservaFormInterno {
+    padding: 10px;
+    width: 90%;
+    margin: 5px;
+  }
+
+  .reservaFormTitulo {
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+  }
 }

@@ -7,7 +7,8 @@ export default function Home() {
     <div className={styles.margem_wrapper}>
       <div className={styles.wrapper}>
         <div className={styles.grid_item1}>
-          <Image src="/images/fora.png" width='568' height='845' />
+          {/*  width='568' height='845'  */}
+          <img className={styles.img} src="/images/fora.png"/>
         </div>
         <div className={styles.grid_item2}>
 
