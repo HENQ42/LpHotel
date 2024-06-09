@@ -20,14 +20,14 @@ jobs:
         authkey: ${{ secrets.TS_AUTH_KEY }}
         tags: tag:ci
 
-    - name: copy file via ssh password
-      uses: appleboy/scp-action@v0.1.7
-      with:
-        host: "hotel"
-        username: "henrique"
-        password: ${{ secrets.SSH_PASSWORD }}
-        source: "./"
-        target: "/home/henrique/web-henrique/LpHotel"
+    # - name: copy file via ssh password
+    #   uses: appleboy/scp-action@v0.1.7
+    #   with:
+    #     host: "hotel"
+    #     username: "henrique"
+    #     password: ${{ secrets.SSH_PASSWORD }}
+    #     source: "./"
+    #     target: "/home/henrique/web-henrique/LpHotel"
         
     # - name: SSH commands
     #   uses: appleboy/ssh-action@v1.0.3
