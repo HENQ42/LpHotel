@@ -11,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
 
     - name: Tailscale
       uses: tailscale/github-action@v2
@@ -20,14 +18,17 @@ jobs:
         authkey: ${{ secrets.TS_AUTH_KEY }}
         tags: tag:ci
 
-    # - name: copy file via ssh password
-    #   uses: appleboy/scp-action@v0.1.7
-    #   with:
-    #     host: "hotel"
-    #     username: "henrique"
-    #     password: ${{ secrets.SSH_PASSWORD }}
-    #     source: "./"
-    #     target: "/home/henrique/web-henrique/LpHotel"
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: copy file via ssh password
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: "hotel"
+        username: "henrique"
+        password: ${{ secrets.SSH_PASSWORD }}
+        source: "./*"
+        target: "/home/henrique/web-henrique/LpHotel"
         
     # - name: SSH commands
     #   uses: appleboy/ssh-action@v1.0.3
