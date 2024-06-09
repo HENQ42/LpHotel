@@ -27,8 +27,8 @@ jobs:
 
     - name: Copy to Server
       run: |
-        sudo apt-get install -y sshpass
-        sshpass -p $SSH_PASSWORD scp -o StrictHostKeyChecking=no -r ./* henrique@hotel:/home/henrique/web-henrique
+        ssh henrique@hotel "[ -d /home/henrique/web-henrique/LpHotel ] || mkdir /home/henrique/web-henrique/LpHotel"
+        sshpass -p $SSH_PASSWORD scp -o StrictHostKeyChecking=no -r ./* henrique@hotel:/home/henrique/web-henrique/LpHotel
       env:
         SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         
