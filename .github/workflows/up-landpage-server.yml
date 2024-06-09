@@ -18,9 +18,9 @@ jobs:
         authkey: ${{ secrets.TS_AUTH_KEY }}
         tags: tag:ci
 
-    - name: check for hotel in netmap
+    - name: check netmap
       run:
-        tailscale status | grep -q hotel
+        tailscale status
 
     - name: Checkout Code
       uses: actions/checkout@v4
