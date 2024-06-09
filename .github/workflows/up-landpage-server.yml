@@ -1,0 +1,45 @@
+name: Deploy LandPage-HotelVitoria to Server via Tailscale VPN
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Tailscale
+      uses: tailscale/github-action@v2
+      with:
+        oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+        oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+        tags: tag:ci
+
+    - name: copy file via ssh password
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: "hotel"
+        username: "henrique"
+        password: ${{ secrets.SSH_PASSWORD }}
+        source: "./"
+        target: "/home/henrique/web-henrique/LpHotel"
+        
+    # - name: SSH commands
+    #   uses: appleboy/ssh-action@v1.0.3
+    #   with:
+    #     host: ${{ secrets.SSH_HOST }}
+    #     username: ${{ secrets.SSH_USERNAME }}
+    #     password: ${{ secrets.SSH_PASSWORD }}
+    #     script: |
+    #       echo "Connected to server"
+    #       cd /home/henrique/LpHotel
+    #       npm install
+    #       npm run build
+
+    #       # Adicione outros comandos conforme necessário

@@ -2,6 +2,28 @@ import Image from 'next/image'
 import styles from './page.module.css'
 
 export default function Home() {
+
+  async function reserv(form) {
+    'use server'
+
+
+    const name = form.get('nome')
+    const telefone = form.get('telefone')
+    const checkin = form.get('checkin')
+    const checkout = form.get('checkout')
+    const pessoas = form.get('pessoas')
+    
+    const data = {
+      name,
+      telefone,
+      checkin,
+      checkout,
+      pessoas
+    }
+
+    console.log(JSON.stringify(data))
+  }
+
   return (
     <>
       <div className={styles.navImage}>
@@ -36,7 +58,7 @@ export default function Home() {
                 <h1 className={styles.h1}>Reserva Rápida</h1>
                 <p className={styles.p}>Escolha as suas datas de entrada e saída, então reserve sua acomodação no Hotel Vitória. A confirmação chegará via Whatsapp.</p>
               </div>
-              <form className={styles.form} action="/sua-rota-de-envio" method="post">
+              <form className={styles.form} action={reserv} method="post">
                 <input className={styles.input} type="text" id="nome" name="nome" placeholder="Nome" required />
                 <input className={styles.input} type='tel' id="telefone" name="telefone" placeholder="Whatsapp" required />
 
