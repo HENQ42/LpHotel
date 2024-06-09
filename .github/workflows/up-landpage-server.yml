@@ -25,14 +25,9 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    # - name: Copy to Server
-    #   uses: appleboy/scp-action@v0.1.7
-    #   with:
-    #     host: "hotel.tail12da2.ts.net"
-    #     username: "henrique"
-    #     password: ${{ secrets.SSH_PASSWORD }}
-    #     source: "./*"
-    #     target: "/home/henrique/web-henrique/LpHotel"
+    - name: Copy to Server
+      run: |
+        scp -o StrictHostKeyChecking=no -r ./* henrique@hotel:/home/henrique/web-henrique/LpHotel
         
     # - name: SSH commands
     #   uses: appleboy/ssh-action@v1.0.3
