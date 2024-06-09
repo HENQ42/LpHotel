@@ -27,7 +27,10 @@ jobs:
 
     - name: Copy to Server
       run: |
-        scp -o StrictHostKeyChecking=no -r ./* henrique@hotel:/home/henrique/web-henrique/LpHotel
+        sudo apt-get install -y sshpass
+        sshpass -p $SSH_PASSWORD scp -o StrictHostKeyChecking=no -r ./* henrique@hotel:/home/henrique/web-henrique/LpHotel
+      env:
+        SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         
     # - name: SSH commands
     #   uses: appleboy/ssh-action@v1.0.3
