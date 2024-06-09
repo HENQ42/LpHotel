@@ -13,35 +13,29 @@ jobs:
     steps:
 
     - name: Tailscale
-      id: tailscale
       uses: tailscale/github-action@v2
       with:
         authkey: ${{ secrets.TS_AUTH_KEY }}
         tags: tag:ci
 
+    - name: check for hotel in netmap
+      run:
+        tailscale status | grep -q hotel
+
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    - name: Debug Network
-      run: |
-        echo "Checking DNS resolution for hotel.tail12da2.ts.net"
-        nslookup hotel.tail12da2.ts.net
-        echo "Pinging hotel.tail12da2.ts.net"
-        ping -c 4 hotel.tail12da2.ts.net
-
-    - name: copy file via ssh password
-      uses: appleboy/scp-action@v0.1.7
-      needs: tailscale
-      with:
-        host: "hotel.tail12da2.ts.net"
-        username: "henrique"
-        password: ${{ secrets.SSH_PASSWORD }}
-        source: "./*"
-        target: "/home/henrique/web-henrique/LpHotel"
-
+    # - name: Copy to Server
+    #   uses: appleboy/scp-action@v0.1.7
+    #   with:
+    #     host: "hotel.tail12da2.ts.net"
+    #     username: "henrique"
+    #     password: ${{ secrets.SSH_PASSWORD }}
+    #     source: "./*"
+    #     target: "/home/henrique/web-henrique/LpHotel"
+        
     # - name: SSH commands
     #   uses: appleboy/ssh-action@v1.0.3
-    #   needs: tailscale
     #   with:
     #     host: ${{ secrets.SSH_HOST }}
     #     username: ${{ secrets.SSH_USERNAME }}
