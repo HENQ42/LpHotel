@@ -34,6 +34,7 @@ jobs:
           cd /home/henrique/web-henrique/LpHotel &&
           pm2 stop all || true &&
           npm install &&
+          npm audit fix --force &&
           pm2 start npm --name "LpHotel" -- run start'
       shell: /usr/bin/bash -e {0}
       env:
