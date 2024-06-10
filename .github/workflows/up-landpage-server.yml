@@ -28,15 +28,20 @@ jobs:
     - name: Copy to Server
       run: |
         sudo apt-get install -y sshpass
+        
         sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel 'mkdir -p /home/henrique/web-henrique/LpHotel'
         sshpass -p $SSH_PASSWORD scp -o StrictHostKeyChecking=no -r ./* henrique@hotel:/home/henrique/web-henrique/LpHotel
+        sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel 'pm2 kill'
+        sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel 'pm2 delete LpHotel || true'
         sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel '
           cd /home/henrique/web-henrique/LpHotel &&
-          pm2 kill &&
           npm install &&
-          npm audit fix --force &&
+          npm audit fix --force'
+        sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel '
+          cd /home/henrique/web-henrique/LpHotel &&
           pm2 start npm --name "LpHotel" -- run start &&
           pm2 save'
+        sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel 'pm2 list'
       shell: /usr/bin/bash -e {0}
       env:
         SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
