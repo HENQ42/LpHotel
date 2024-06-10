@@ -29,6 +29,5 @@ jobs:
       run: |
         sudo apt-get install -y sshpass
         sshpass -p $SSH_PASSWORD scp -o StrictHostKeyChecking=no -r ./* henrique@hotel:/home/henrique/web-henrique/LpHotel
-        sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel 'cd /home/henrique/web-henrique/LpHotel && npm install && npm run start'
       env:
         SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
