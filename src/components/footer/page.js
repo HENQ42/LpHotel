@@ -34,9 +34,8 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.direitos}>
-            <p className={styles.p}>Design por Morciani Soluções Digitais</p>
             <p className={styles.p}>Desenvolvido por Henrique Macêdo</p>
-            <p className={styles.p}>© 2023 Hotel Vitoria Xinguara. Todos os direitos reservados.</p>
+            <p className={styles.p}>© 2024 Hotel Vitoria Xinguara. Todos os direitos reservados.</p>
           </div>
         </div>
       </div>
