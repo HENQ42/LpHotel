@@ -32,7 +32,7 @@ jobs:
         sshpass -p $SSH_PASSWORD scp -o StrictHostKeyChecking=no -r ./* henrique@hotel:/home/henrique/web-henrique/LpHotel
         sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel '
           cd /home/henrique/web-henrique/LpHotel &&
-          pm2 stop all || true &&
+          pm2 kill &&
           npm install &&
           npm audit fix --force &&
           pm2 start npm --name "LpHotel" -- run start &&
