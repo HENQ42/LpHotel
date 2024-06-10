@@ -40,7 +40,8 @@ jobs:
           fi &&
           pm2 delete LpHotel_new &&
           rm -rf /home/henrique/web-henrique/LpHotel &&
-          mv /home/henrique/web-henrique/LpHotel_new /home/henrique/web-henrique/LpHotel'
+          mv /home/henrique/web-henrique/LpHotel_new /home/henrique/web-henrique/LpHotel &&
+          pm2 save'
       shell: /usr/bin/bash -e {0}
       env:
         SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
