@@ -32,10 +32,12 @@ jobs:
         sshpass -p $SSH_PASSWORD scp -o StrictHostKeyChecking=no -r ./* henrique@hotel:/home/henrique/web-henrique/LpHotel
         sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel '
           cd /home/henrique/web-henrique/LpHotel &&
-          pm2 stop all || true &&
           npm install &&
-          npm audit fix --force &&
-          pm2 start npm --name "LpHotel" -- run start' &&
+          if pm2 describe LpHotel > /dev/null; then
+            pm2 reload LpHotel --update-env
+          else
+            pm2 start npm --name "LpHotel" -- run start
+          fi &&
           pm2 save'
       shell: /usr/bin/bash -e {0}
       env:
