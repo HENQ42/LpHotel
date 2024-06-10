@@ -31,13 +31,15 @@ jobs:
         
         sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel 'mkdir -p /home/henrique/web-henrique/LpHotel'
         sshpass -p $SSH_PASSWORD scp -o StrictHostKeyChecking=no -r ./* henrique@hotel:/home/henrique/web-henrique/LpHotel
-        sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel 'pm2 kill'
-        sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel 'pm2 delete LpHotel || true'
+        
         sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel '
           cd /home/henrique/web-henrique/LpHotel &&
           npm install &&
           npm run build &&
           npm audit fix --force'
+
+        sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel 'pm2 kill'
+        sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel 'pm2 delete LpHotel || true'
         sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel '
           cd /home/henrique/web-henrique/LpHotel &&
           pm2 start npm --name "LpHotel" -- run start &&
