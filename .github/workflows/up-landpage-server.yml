@@ -33,6 +33,7 @@ jobs:
         sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel '
           cd /home/henrique/web-henrique/LpHotel &&
           npm install &&
+          npm run build &&
           if pm2 describe LpHotel > /dev/null; then
             pm2 reload LpHotel --update-env
           else
