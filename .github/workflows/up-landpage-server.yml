@@ -36,6 +36,7 @@ jobs:
         sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel '
           cd /home/henrique/web-henrique/LpHotel &&
           npm install &&
+          npm run build &&
           npm audit fix --force'
         sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no henrique@hotel '
           cd /home/henrique/web-henrique/LpHotel &&
