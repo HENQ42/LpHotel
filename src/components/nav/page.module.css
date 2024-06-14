@@ -66,7 +66,7 @@
 
 
 .navImage {
-  background-image: url('/images/image.png');
+  /* background-image: url('/images/imagens-hotel/fachada-hotel.jpeg'); */
   filter: blur(0px);
   /* Caminho relativo a partir da pasta public */
   background-size: cover;
@@ -83,7 +83,7 @@
 }
 
 .navImage::after {
-  content: '';
+  content: '';  
   position: absolute;
   top: 0;
   left: 0;
@@ -91,6 +91,18 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   /* Sobreposição preta com 50% de opacidade */
+}
+.navImage::before {
+  background-image: url('/images/imagens-hotel/fachada-hotel.jpeg');
+  background-size: cover;
+  background-position: center;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(1.5px);
 }
 
 .reservaMargin {
