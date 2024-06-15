@@ -29,6 +29,12 @@
     /* background-color: aqua; */
 }
 
+.grid_item1 .img{
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+
 .grid_item3{
     width: auto;
     height: auto;

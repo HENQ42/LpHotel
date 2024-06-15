@@ -8,7 +8,7 @@ export default function Home() {
       <div className={styles.wrapper}>
         <div className={styles.grid_item1}>
           {/*  width='568' height='845'  */}
-          <img className={styles.img} src="/images/fora.png"/>
+          <Image className={styles.img} width={650} height={880} quality={100} src="/images/imagens-hotel/portaria-crop.jpeg"/>
         </div>
         <div className={styles.grid_item2}>
 
@@ -84,8 +84,10 @@ export default function Home() {
         </div>
         <div className={styles.grid_item4}>
           <div className={styles.video}>
-            <Image className={styles.img} src="/images/quarto.png" width='540' height='260' />
-            <svg className={styles.svg} width='100' height='107' fill='white' aria-hidden="true" class="e-font-icon-svg e-eicon-play" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M838 162C746 71 633 25 500 25 371 25 258 71 163 162 71 254 25 367 25 500 25 633 71 746 163 837 254 929 367 979 500 979 633 979 746 933 838 837 929 746 975 633 975 500 975 367 929 254 838 162M808 192C892 279 933 379 933 500 933 621 892 725 808 808 725 892 621 938 500 938 379 938 279 896 196 808 113 725 67 621 67 500 67 379 108 279 196 192 279 108 383 62 500 62 621 62 721 108 808 192M438 392V642L642 517 438 392Z"></path></svg>
+            <video width="480" height='254' loop muted autoPlay defaultMuted style={{objectFit: 'cover', borderRadius: '10px'}}>
+                <source src="/images/imagens-hotel/ap-video-convert-high.mp4" type="video/mp4" />
+                Seu navegador não suporta a tag de vídeo.
+            </video>
           </div>
         </div>
       </div>

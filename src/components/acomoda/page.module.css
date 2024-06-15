@@ -127,6 +127,11 @@
     /* background-color: #cf2a2a; */
     z-index: 4;
 }
+
+.quarto_casal .quarto_casal_img{
+    object-fit: cover;
+    filter: brightness(1.1);
+}
 .quarto_casal .titulo{
     width: 250px;
     height: 100px;
@@ -156,6 +161,21 @@
     align-items: end;
     /* background-color: #cf2a2a; */
     z-index: 4;
+}
+
+.quarto_single .quarto_single_img{
+    object-fit: cover;
+    filter: brightness(1.2);
+}
+.quarto_familia .quarto_familia_img{
+    object-fit: cover;
+    filter: brightness(1.4);
+}
+
+
+.quarto_triplo .quarto_triplo_img{
+    object-fit: cover;
+    filter: brightness(1.1);
 }
 .quarto_triplo .titulo{
     width: 250px;

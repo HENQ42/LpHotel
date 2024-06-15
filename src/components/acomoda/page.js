@@ -20,15 +20,15 @@ export default function Home() {
           </div>
           <div className={styles.quartos}>
             <div className={styles.quarto_single}>
-              <Image src="/images/quarto.png" alt="Quarto de solteiro." width={311} height={381} />
+              <Image className={styles.quarto_single_img} src="/images/imagens-hotel/ap-solteiro.jpeg" alt="Quarto de solteiro." width={311} height={381} quality={100} />
               <div className={styles.titulo}>
-                <h3 className={styles.h3}>Single</h3>
+                <h3 className={styles.h3}>Individual</h3>
                 <p className={styles.p}>R$ 80,00</p>
               </div>
             </div>
 
             <div className={styles.quarto_casal}>
-              <Image src="/images/quarto2.png" alt="Quarto de casal." width={311} height={381} />
+              <Image className={styles.quarto_casal_img} src="/images/imagens-hotel/ap-individual.jpeg" alt="Quarto de casal." width={311} height={381} quality={100} />
               <div className={styles.titulo}>
                 <h3 className={styles.h3}>Casal</h3>
                 <p className={styles.p}>R$ 120,00</p>
@@ -36,7 +36,7 @@ export default function Home() {
             </div>
 
             <div className={styles.quarto_triplo}>
-              <Image src="/images/quarto3.png" alt="Quarto para tres pessoas." width={311} height={381} />
+              <Image className={styles.quarto_triplo_img} src="/images/imagens-hotel/ap-triplo.jpeg" alt="Quarto para tres pessoas." width={311} height={381} quality={100} />
               <div className={styles.titulo}>
                 <h3 className={styles.h3}>Quarto Triplo</h3>
                 <p className={styles.p}>R$ 160,00</p>
@@ -44,7 +44,7 @@ export default function Home() {
             </div>
 
             <div className={styles.quarto_familia}>
-              <Image src="/images/quarto4.png" alt="Quarto Familia." width={311} height={381} />
+              <Image className={styles.quarto_familia_img} src="/images/imagens-hotel/ap-triplo-2.jpeg" alt="Quarto Familia." width={311} height={381} quality={100}/>
               <div className={styles.titulo}>
                 <h3 className={styles.h3}>Quarto Família</h3>
                 <p className={styles.p}>R$ 210,00</p>
@@ -56,30 +56,30 @@ export default function Home() {
       <div className={styles.oferece}>
             <div className={styles.oferece_text}>
               <h2 className={styles.h2}>Priorizamos Seu Conforto</h2>
-              <p className={styles.p}>Para que o hóspede tenha uma experiência e estadia agradável oferecemos as seguintes amenidades:</p>
+              <p className={styles.p}>Para que o hóspede tenha uma experiência e estadia agradável oferecemos as seguintes acomodações:</p>
             </div>
             <div className={styles.oferece_img}>
               <div className={styles.img_area}>
-                <Image className={styles.img} src="/images/almoco.png" alt="Almoco." width={32} height={32} />
+                <Image className={styles.img} src="/images/almoco.png" alt="Almoco." width={32} height={32} quality={100}/>
               </div>
               <div className={styles.img_area}>
-                <Image className={styles.img} src="/images/garcom.png" alt="garçom." width={32} height={32} />
+                <Image className={styles.img} src="/images/garcom.png" alt="garçom." width={32} height={32} quality={100}/>
               </div>
               <div className={styles.img_area}>
-                <Image className={styles.img} src="/images/estacionamento.png" alt="estacionamento." width={32} height={32} />
+                <Image className={styles.img} src="/images/estacionamento.png" alt="estacionamento." width={32} height={32} quality={100}/>
               </div>
               <div className={styles.img_area}>
-                <Image className={styles.img} src="/images/lavanderia.png" alt="lavanderia." width={32} height={32} />
+                <Image className={styles.img} src="/images/lavanderia.png" alt="lavanderia." width={32} height={32} quality={100}/>
               </div>
               <div className={styles.img_area}>
-                <Image className={styles.img} src="/images/security.png" alt="segurança." width={32} height={32} />
+                <Image className={styles.img} src="/images/security.png" alt="segurança." width={32} height={32} quality={100}/>
               </div>
               <div className={styles.img_area}>
-                <Image className={styles.img} src="/images/tel24h.png" alt="Telefone 24 Horas." width={32} height={32} />
+                <Image className={styles.img} src="/images/tel24h.png" alt="Telefone 24 Horas." width={32} height={32} quality={100}/>
               </div>
             </div>
             <div className={styles.img_areaIcon}>
-              <Image className={styles.img} src="/images/Arrow.png" alt="Seta." width={16} height={35} />
+              <Image className={styles.img} src="/images/Arrow.png" alt="Seta." width={16} height={35} quality={100}/>
             </div>
           </div>
     </>
